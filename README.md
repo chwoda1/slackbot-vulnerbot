@@ -2,7 +2,7 @@
 STATUS: 
 	NOT COMPLETED
 	
-	Still have to run unit tests and integration tests
+	Still have to run thorough unit and integration tests
 
 USE:
 	Currently, vulnerbot can only understand a very small set of commands and is very inflexible. However, this should
