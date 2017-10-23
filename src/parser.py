@@ -17,6 +17,7 @@ class Data_Grabber:
         @PARAM self 
         @PARAM url is the url to the data path
         @PARAM keywords comes in the format of [MANUFACTURER, THREAT_LEVEL, DATE]
+	
 
     """
 
@@ -24,11 +25,17 @@ class Data_Grabber:
         
         holder = []
         container = {}
-    
-        response = urllib.request.urlopen(url)
-        values = gzip.decompress(response.read()).decode('utf-8')
-        stuff = json.loads(values)
-        
+
+	try:
+    		
+		response = urllib.request.urlopen(url)
+        	values = gzip.decompress(response.read()).decode('utf-8')
+        	stuff = json.loads(values)
+	
+	except:    
+		return holder[0] = 'Sorry, there seems to be a problem with the url or your internet connection!'    
+
+
         for keys in stuff['CVE_Items']:
     
             if keywords[0] != None:
@@ -50,6 +57,14 @@ class Data_Grabber:
 
         return holder
 
+    """
+	@PARAM self
+	@PARAM url
+	@PARAM text
+
+	@RETURN string to be printed to the end user
+
+    """
 
     def snag_ip(self, url, text):
         
@@ -94,5 +109,4 @@ class Data_Grabber:
 
        return holder
     
-
 

@@ -1,5 +1,8 @@
+#!/usr/bin/env python3
+
 import sys
 sys.path.append('../')
+
 from slackclient import SlackClient
 from src import parser
 import time
@@ -57,8 +60,6 @@ def get_question(text , user):
     # question 4) is this email spam? ~email~
     # question 5) what is your name?
 
-    print(text)
-
     if re.match(' obtain all (high|medium|low) exploitability issues' , text):
         flag = 1
         date = time.strftime('%Y-%m-%d')
@@ -81,7 +82,6 @@ def get_question(text , user):
 
     elif re.match(r'( is |)\b\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b (a bad|a malicious|a dangerous) ip\?*', text):
         flag = 3
-        print(text)
         response = grabber.snag_ip(autoshun_url,text)
     
     elif re.match('( is |)<mailto:([a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]{1,30})\|' + \
@@ -149,6 +149,9 @@ def slack_message(send):
             icon_url = 'http://www.clipartlord.com/wp-content/uploads/2014/09/robot29-201x240.png',
             username = 'vulnerbot'
             )
+
+	return send 
+
 
 def json_iterator(text , to_send):
     

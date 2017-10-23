@@ -1,12 +1,20 @@
 import sys
+import unittest
 sys.path.append('../')
 from src import parser
+from src import bot
 
-values = parser.Data_Grabber()
-array = [10] 
-array[0] = 'publishedDate'
+class Data_Grabber_Test:
 
-keys = [10]
-keys[0] = '2017-10'
+	def test_snag_json(self): 
 
-values.snag_json('https://static.nvd.nist.gov/feeds/json/cve/1.0/nvdcve-1.0-modified.json.gz', array)
+	def test_snag_ip(self): 
+
+	def test_snag_file(self): 
+
+	def test_grab_data(self): 
+
+
+
+
+

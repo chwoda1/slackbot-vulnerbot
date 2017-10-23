@@ -1,0 +1,14 @@
+#!/bin/bash
+
+if ["$1" = "-test"]
+then
+	cd tests
+	python3 parser_test.py
+
+else
+	cd src
+	python3 bot.py
+	
+fi
+
+
