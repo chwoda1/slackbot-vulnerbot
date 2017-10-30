@@ -15,8 +15,8 @@
 	
 	1.) @vulnerbot obtain all {low|medium|high} exploitability issues (if none specified, default is high)
 	2.) @vulnerbot obtain all exploits targeting {manufacturers}
-	3.) @vulnerbot is this ip malicious? {ip}
-	4.) @vulnerbot is this email spam? {email}
+	3.) @vulnerbot is {ip} {a bad|a malicious|a dangeroug} ip?
+	4.) @vulnerbot is {email} {a bad|a malicious|a junk|a spam} addres?
 	5.) @vulnerbot what is your name? 
 
 ### NOTE:
