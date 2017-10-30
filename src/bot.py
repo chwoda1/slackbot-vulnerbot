@@ -14,7 +14,7 @@ import gzip
 import datetime
 
 # need to do something with this slack token....`
-slack_token = SlackClient(os.environ['API_TOKEN')
+slack_token = SlackClient(os.environ['API_TOKEN'])
 
 nvd_url = "https://static.nvd.nist.gov/feeds/json/cve/1.0/nvdcve-1.0-modified.json.gz"
 autoshun_url = 'https://www.autoshun.org/download/?api_key=7c8cf783819aec76915ac9d1673&format=csv'
