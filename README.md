@@ -21,7 +21,7 @@
 
 ### NOTE:
 	Starting with four questions, I knew I wanted the first two questions to be in depth, very useful data that may require some reading. 
-	If someone was researching apple security flaws or wanted a list of high profile vulnerabilities, they could get a comprehensive list 
+	If someone was researching Apple security flaws or wanted a list of high profile vulnerabilities, they could get a comprehensive list 
 	of them quickly using the National Vulnerability Database and Vulnerbot. With the remaining two questions, I wanted them to be a quick yes or no question. Instead of having to run a 
 	google search, you could simply type it into a slack message quickly and figure out the information you needed to know. 
 
