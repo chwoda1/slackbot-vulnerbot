@@ -1,9 +1,13 @@
 #!/bin/bash
 
-if ["$1" = "-test"]
-then
+if [ $1 == "--tests" ]; then
+	echo 'Running Tests...'
 	cd tests
+	echo 'Running parser_test.py...'
 	python3 parser_test.py
+
+	echo "Running bot_test.py..."
+	python3 bot_test.py	
 
 else
 	cd src

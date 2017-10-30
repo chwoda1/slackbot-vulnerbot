@@ -6,7 +6,10 @@ if command -v python3 &>/dev/null; then
 	VALUES= pip list | grep -F slackclient 
 	
 	if [ -z '$VALUES' ]; then 
-		pip install slackclient -user
+		
+		echo Installing SlackClient
+		pip3 install slackclient -user	
+
 	fi	
 
 else 
