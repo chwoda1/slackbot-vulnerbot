@@ -11,6 +11,6 @@ python:
   - "nightly"
 sudo: false
 before_script:
-	- chmod +x run
+    - chmod +x run
 install: pip3 install slack_client
 script: ./run --tests && ./run	 
