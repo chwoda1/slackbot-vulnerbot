@@ -1,10 +1,9 @@
 
-STATUS: 
-	NOT COMPLETED
-	
-	Still have to run thorough unit and integration tests
+#STATUS:
+	[![Build Status](https://travis-ci.org/crw5996/slackbot-vulnerbot.svg?branch=master)](https://travis-ci.org/crw5996/slackbot-vulnerbot)	
 
-USE:
+
+#USE:
 	Currently, vulnerbot can only understand a very small set of commands and is very inflexible. However, this should
 	change over time. It currently will answer...
 	
@@ -15,7 +14,7 @@ USE:
 	5.) @vulnerbot what is your name? 
 
 
-NOTE:
+#NOTE:
 	Starting with four questions, I knew I wanted the first two questions to be in depth, very useful data that may require some reading. 
 	If someone was researching apple security flaws or wanted a list of high profile vulnerabilities, they could get a comprehensive list 
 	of them quickly. With the remaining two questions, I wanted them to be mainly a quick yes or no question. Instead of having to google 
