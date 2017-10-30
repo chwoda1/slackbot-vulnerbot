@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import sys
+import os
 sys.path.append('../')
 
 from slackclient import SlackClient
@@ -13,7 +14,7 @@ import gzip
 import datetime
 
 # need to do something with this slack token....`
-slack_token = SlackClient("xoxp-257262861505-257919736501-262557545152-3a182e8cba5fe9e5fdc4fa59a1ff82eb")
+slack_token = SlackClient(os.environ['API_TOKEN')
 
 nvd_url = "https://static.nvd.nist.gov/feeds/json/cve/1.0/nvdcve-1.0-modified.json.gz"
 autoshun_url = 'https://www.autoshun.org/download/?api_key=7c8cf783819aec76915ac9d1673&format=csv'
