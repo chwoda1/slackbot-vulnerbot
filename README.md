@@ -1,5 +1,6 @@
 
 ### STATUS:
+
 	[![Build Status](https://travis-ci.org/crw5996/slackbot-vulnerbot.svg?branch=master)](https://travis-ci.org/crw5996/slackbot-vulnerbot)	
 
 
