@@ -12,5 +12,5 @@ python:
 sudo: false
 before_script:
     - chmod +x run
-install: pip3 install slack_client
+install: pip3 install slackclient
 script: ./run --tests && ./run	 
