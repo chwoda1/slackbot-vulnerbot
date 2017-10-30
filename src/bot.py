@@ -12,6 +12,7 @@ import re
 import gzip
 import datetime
 
+# need to do something with this slack token....`
 slack_token = SlackClient("xoxp-257262861505-257919736501-262557545152-3a182e8cba5fe9e5fdc4fa59a1ff82eb")
 
 nvd_url = "https://static.nvd.nist.gov/feeds/json/cve/1.0/nvdcve-1.0-modified.json.gz"
