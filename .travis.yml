@@ -1,6 +1,4 @@
 language: python
 sudo: false
-
 install: pip3 install slack_client --user
-script: ./run --tests && ./run
-	 
+script: ./run --tests && ./run	 
