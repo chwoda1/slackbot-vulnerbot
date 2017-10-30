@@ -10,5 +10,7 @@ python:
   - "3.7-dev" # 3.7 development branch
   - "nightly"
 sudo: false
+before_script:
+	-chmod +x ./travis/run
 install: pip3 install slack_client
 script: ./run --tests && ./run	 
