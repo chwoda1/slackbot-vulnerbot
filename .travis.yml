@@ -1,16 +1,19 @@
 language: python
-python: 
-  - "3.2"
-  - "3.3"
-  - "3.4"
-  - "3.5"
-  - "3.5-dev" # 3.5 development branch
-  - "3.6"
-  - "3.6-dev" # 3.6 development branch
-  - "3.7-dev" # 3.7 development branch
-  - "nightly"
+python:
+- '3.2'
+- '3.3'
+- '3.4'
+- '3.5'
+- 3.5-dev
+- '3.6'
+- 3.6-dev
+- 3.7-dev
+- nightly
 sudo: false
 before_script:
-    - chmod +x run
+- chmod +x run
 install: pip3 install slackclient
-script: ./run --tests && ./run	 
+script: ./run --tests && ./run
+env:
+  global:
+    secure: rZCABVJuKIiIzyYL0CbFHW6QMzSKrjL9R5VsXLv17d2a/XpjHnMD5HrI0R3GbgePwA7q7H9TDKgHCh+wcWJsU8GVSOaLtYMVP1I87gIDQsQz0xHI8oMEMnhtuInc47OBZs3S/ioC603fEbhIbRk6a8UOUAJu6ybg1tRyVb/cjI6juMpcs7Jg1Nmp5+WgUIuv/Vgh4IPl1C2VMsX6iyFG5GsL5oNRgiTFauHCFYvY3m2bV0g1KSWaaPhoTSOz2vYIPpEtfSVN4jCIO0PDda4R4bTwqXeSLYsDC7ocGYrh7/1VyJj6TQIykFoP9H3MQA/xNn1rvk1gIRVC55A5WP05s50Yq2AYfMGU6U/8sVSNbSfBDnGfYQZGZtUjunj/+FcZglQqdIP2VZCHO0g2zBuCLFbotyD1Q5RIkiYjufcSeGR3hxp4jmtw5+syhgUKLMXe4l3n88VxxvR+TDdqv5InWSbkQQ6TIG1atj+uhXAPivyf89J2G6+J3FTlVS1/OQHfSwWzzWYLnMvSj1Klen/HwJTpfpNR5+1uitXD5k59OZnf2E9GQHMj28Tmx8MIS39sMF9c0z8SGcVeBJBp2Arp4uGmeO5HyozvSFI8L+y5FyFRqsWcuj/3qHVeoCsuVEFovUGTWaevOrPW0kP9cfASeGPILAcyeIfebvg0ZcYljI0=
