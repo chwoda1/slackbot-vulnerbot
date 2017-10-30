@@ -63,7 +63,7 @@ def get_question(text, user , debug=False):
     # question 3) is this ip malicious? ~ip~
     # question 4) is this email spam? ~email~
     # question 5) what is your name?
- 
+    print(text)
     if re.match(' obtain all (high|medium|low|HIGH|MEDIUM|LOW) exploitability issues', text):
         flag = 1
 
@@ -87,8 +87,8 @@ def get_question(text, user , debug=False):
         flag = 3
         response = grabber.snag_ip(autoshun_url, text)
 
-    elif re.match(' is [a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]{1,30} a (valid|malicious|junk|spam) (email|address)\?', text):
-
+    elif re.match(' is <mailto:[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]{1,30}|[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]{1,30}> a (malicious|bad|spam|junk) address\?', text):
+        
         flag = 4
         domain_name = re.search(r'@([\w.]+)', text)
         response = grabber.snag_file(junkmail_url, domain_name.group(1))
@@ -109,7 +109,7 @@ def get_question(text, user , debug=False):
 
 
 def send_response(text, user, flag):
-    to_sent = ''
+    to_send = ''
     to_send = 'Hi ' + str(user) + '!\n'
 
     if flag == 1:
