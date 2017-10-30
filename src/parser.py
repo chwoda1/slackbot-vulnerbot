@@ -66,7 +66,6 @@ class Data_Grabber:
     def snag_ip(self, url, text):
 
         ip = re.findall(r'[0-9]+(?:\.[0-9]+){3}', text)
-
         if os.path.exists(ip_file):
 
             file_age = os.path.getatime(ip_file)

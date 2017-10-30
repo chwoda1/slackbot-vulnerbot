@@ -15,10 +15,13 @@ class Data_Grabber_Test(unittest.TestCase):
     autoshun_url = 'https://www.autoshun.org/download/?api_key=7c8cf783819aec76915ac9d1673&format=csv'
     junkmail_url = 'https://raw.githubusercontent.com/martenson/disposable-email-domains/master/whitelist.conf'
 
-    def test_snag_json(self):
-        data1 = self.snagger.snag_json(nvd_url , ['microsoft' , None , None])
-        data2 = self.snagger.snag_json(nvd_url , [None , 'HIGH' , None])
+    def test_snag_json(self):        
 
+        data1 = self.snagger.snag_json(self.nvd_url , ['microsoft' , None , None])
+        data2 = self.snagger.snag_json(self.nvd_url , [None , 'HIGH' , None])
+	
+        for keys in data1:
+            assert keys['manufacturer'] == 'microsoft'
 
     def test_snag_ip(self):
 
@@ -69,10 +72,6 @@ class Data_Grabber_Test(unittest.TestCase):
                 assert values ,'That email address looks safe!'
 
 
-    def test_grab_data(self):
-        print('hey')
-
-
 data = Data_Grabber_Test()
 
 data.test_snag_ip()
@@ -80,3 +79,6 @@ print("Snag IP Test Passed")
 
 data.test_snag_file()
 print("Snag File Test Passed")
+
+data.test_snag_json()
+

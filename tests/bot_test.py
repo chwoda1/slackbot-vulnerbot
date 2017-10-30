@@ -58,10 +58,6 @@ class Bot_Tests(unittest.TestCase):
             flag = bot.get_question(item, 'Chris' , debug=True)
             assert flag == 4
 
-    def test_json_iterator(self):
-        print('')
-
-
 values = Bot_Tests()
 
 values.test_get_question()

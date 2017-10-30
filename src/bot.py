@@ -109,7 +109,7 @@ def get_question(text, user , debug=False):
 
 
 def send_response(text, user, flag):
-
+    to_sent = ''
     to_send = 'Hi ' + str(user) + '!\n'
 
     if flag == 1:
